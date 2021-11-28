@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(169, 144, 251);
+}
+i,
+svg{
+    pointer-events: none;
+}
+.kick-pad,.hihat-pad,.snare-pad{
+width: 5rem;
+height: 5rem;
+margin: 1rem 0.5rem;
+cursor: pointer;
+}
+.sequencer{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.kick-pad{
+    background-color: rgb(159, 221, 245);
+
+}
+.hihat-pad{
+background-color: rgb(243, 182, 235);
+}
+.snare-pad{
+     background-color: rgb(136, 248, 189);
+}
+.kick-pad.active{
+    background-color: rgb(83, 156, 224);
+}
+.snare-pad.active{
+    background-color: rgb(88, 226, 107);
+}
+.hihat-pad.active{
+    background-color: rgb(255, 116, 236);
+}
+.kick,.hihat,.snare{
+    display: flex;
+}
+.kick-track,.hihat-track,.snare-track{
+    align-items: center;
+    display: flex;
+    width: 86%;
+    justify-content: space-between;
+    margin-top:5rem ;
+}
+.controls{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+    margin: 0rem 2rem;
+}
+
+.controls button{
+    padding: 0.5rem;
+    outline: none;
+    border: .5px solid black;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.pad{
+    transition: all 0.5s ease;
+    border-radius: 10px;
+}
+.play{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 3rem;
+    border-radius: 1rem;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(92, 88, 88);
+    border: none;
+}
+.tempo{
+    width: 30%;
+    margin: 3rem;
+    text-align: center;
+} 
+.tempo p{
+    font-size: 1.5rem;
+}
+.tempo-slider{
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+background-color: rgb(88, 88, 88);
+border-radius: 32px;
+}
+select{
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+@keyframes playTrack{
+
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.3);
+    }
+}
